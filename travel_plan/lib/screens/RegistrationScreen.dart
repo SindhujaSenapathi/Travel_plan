@@ -56,106 +56,80 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
           ),
           Center(
             child: FractionallySizedBox(
-              widthFactor: 0.3, // Adjust this value as needed
+              widthFactor: 0.7, // Adjust this value as needed
               child: Container(
-                padding: EdgeInsets.all(16.0),
-                color: Colors.white, // Background color for the frame container
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    Container(
-                      padding: EdgeInsets.all(16.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        border: Border.all(
-                          color: Colors.grey,
-                          width: 1.0,
+                padding: EdgeInsets.all(12.0),
+                child: Container(
+                  height: 450, // Adjust the height here
+                  padding: EdgeInsets.all(12.0),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(10.0),
+                    border: Border.all(
+                      color: Colors.grey,
+                      width: 1.0,
+                    ),
+                    color: Colors.white, // Background color inside the borders
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      TextField(
+                        controller: _usernameController,
+                        decoration: InputDecoration(
+                          labelText: 'Username',
+                          isDense: true,
                         ),
                       ),
-                      child: Column(
-                        children: [
-                          TextField(
-                            controller: _usernameController,
-                            decoration: InputDecoration(
-                              labelText: 'Username',
-                              isDense: true,
-                            ),
-                          ),
-                          SizedBox(height: 12.0),
-                          TextField(
-                            controller: _phoneNumberController,
-                            decoration: InputDecoration(
-                              labelText: 'Phone Number',
-                              isDense: true, 
-                            ),
-                          ),
-                          SizedBox(height: 12.0),
-                          TextField(
-                            controller: _dobController,
-                            decoration: InputDecoration(
-                              labelText: 'Date of Birth',
-                              isDense: true,
-                            ),
-                          ),
-                          SizedBox(height: 12.0),
-                          TextField(
-                            controller: _emailController,
-                            decoration: InputDecoration(
-                              labelText: 'Email',
-                              isDense: true,
-                            ),
-                          ),
-                          SizedBox(height: 12.0),
-                          TextField(
-                            controller: _passwordController,
-                            decoration: InputDecoration(
-                              labelText: 'Password',
-                              isDense: true,
-                            ),
-                            obscureText: true,
-                          ),
-                          SizedBox(height: 12.0),
-                          TextField(
-                            controller: _stateController,
-                            decoration: InputDecoration(
-                              labelText: 'State',
-                              isDense: true,
-                            ),
-                          ),
-                          SizedBox(height: 12.0),
-                          TextField(
-                            controller: _cityController,
-                            decoration: InputDecoration(
-                              labelText: 'City',
-                              isDense: true,
-                            ),
-                          ),
-                          SizedBox(height: 12.0),
-                          TextField(
-                            controller: _pincodeController,
-                            decoration: InputDecoration(
-                              labelText: 'Pincode',
-                              isDense: true,
-                            ),
-                          ),
-                          SizedBox(height: 12.0),
-                          TextField(
-                            controller: _addressController,
-                            decoration: InputDecoration(
-                              labelText: 'Address',
-                              isDense: true,
-                            ),
-                          ),
-                        ],
+                      SizedBox(height: 8.0),
+                      TextField(
+                        controller: _phoneNumberController,
+                        decoration: InputDecoration(
+                          labelText: 'Phone Number',
+                          isDense: true, 
+                        ),
                       ),
-                    ),
-                    SizedBox(height: 20.0),
-                    ElevatedButton(
-                      onPressed: _register,
-                      child: Text('Register'),
-                    ),
-                  ],
+                      SizedBox(height: 12.0),
+                      TextField(
+                        controller: _dobController,
+                        decoration: InputDecoration(
+                          labelText: 'Date of Birth',
+                          isDense: true,
+                        ),
+                      ),
+                      SizedBox(height: 12.0),
+                      TextField(
+                        controller: _emailController,
+                        decoration: InputDecoration(
+                          labelText: 'Email',
+                          isDense: true,
+                        ),
+                      ),
+                      SizedBox(height: 12.0),
+                      TextField(
+                        controller: _passwordController,
+                        decoration: InputDecoration(
+                          labelText: 'Password',
+                          isDense: true,
+                        ),
+                        obscureText: true,
+                      ),
+                      
+                      SizedBox(height: 12.0),
+                      TextField(
+                        controller: _addressController,
+                        decoration: InputDecoration(
+                          labelText: 'Address',
+                          isDense: true,
+                        ),
+                      ),
+                      SizedBox(height: 20.0),
+                      ElevatedButton(
+                        onPressed: _register,
+                        child: Text('Register'),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ),

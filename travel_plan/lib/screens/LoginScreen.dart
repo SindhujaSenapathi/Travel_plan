@@ -69,8 +69,10 @@ class _LoginScreenState extends State<LoginScreen> {
         ),
         child: Center(
           child: FractionallySizedBox(
-            widthFactor: 0.2, // Adjust as needed
+            widthFactor: 0.5, // Adjust as needed
+          
             child: Container(
+              height: 250,
               padding: EdgeInsets.all(20.0),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10.0),
